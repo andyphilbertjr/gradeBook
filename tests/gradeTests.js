@@ -12,6 +12,14 @@ exports["Can add new grade"] = function(test) {
     test.done();
     
 } 
+exports["Can compute Letter grade"] = function(test){
+    book.addGrade(100)
+    book.addGrade(90)
+    var result = book.getLetterGrade();
+
+    test.equal(result, "A");
+    test.done()
+}
 
 exports["can average grades"] = function(test){
     book.addGrade(100);
